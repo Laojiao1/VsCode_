@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 块：独占一行，宽度默认是父级的100%，添加宽度都生效 */
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+
+            display: inline-block;
+        }
+
+        /* 2. 行内：一行可以显示多个；宽度和高度默认由内容撑开；不可以设置宽高
+            比如：a, span, b, u, i, s, strong, ins, em, del... 
+        */
+
+        /* 3. 行内块：一行可以显示多个；可以设置宽高
+            比如：input, textarea, button, select ...
+            特殊情况：img标签有行内块元素特点，但是Chrome调试工具中显示结果是inline
+        */
+        img {
+            width: 200px;
+            height: 100px;
+        }
+
+        /* 4. 显示模式转换: 改变元素默认的显示特点，让元素符合布局要求 */
+        /*
+            display: block —— 转换成块级元素
+            display: inline-block —— 转换成行内块元素
+            display: inline —— 转换成行内元素
+         */
+
+    </style>
+</head>
+<body>
+    <div>111</div>
+    <div>222</div>
+    <br>
+    <span>span</span>
+    <span>span</span>
+    <br>
+    <img src="../../HTML/th.jpg" alt="">
+</body>
+</html>

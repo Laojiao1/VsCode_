@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            color:orange;
+        }
+        .box {
+            color:blue;
+        }
+        div {
+            color:green !important;
+            /* !important 不要给继承的添加，自己有央视无法继承父级样式 */
+        } 
+        body {
+            color:red;
+        }
+
+        /*
+            通过权重叠加计算方法，判断最终哪个选择器优先级最高会生效
+            权重计算公式：(行内样式的个数，id选择器的个数，类选择器的个数，标签选择器的个数) 
+            比较规则：
+            1. 先比较第一级数组，如果比较出来了，剩下的统统不看
+            2. 如果第一级数字都相同，那么比较第二级.. 依次类推直到比较出优先级
+            3. 如果最终所有数字都相同，表示优先级相同，则比较层叠性(谁写在下面，谁说了算)
+            注意：!important如果不是继承，则权重最高
+         */
+    </style>
+</head>
+<body>
+    <div class="box" id="box" style="color:pink">测试优先级</div>
+</body>
+</html>

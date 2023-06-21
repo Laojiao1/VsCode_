@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 标签选择器 */
+        p {
+            color:red;
+        }
+        /* 标签选择器，选中所有的这个标签都生效css */
+
+        .green {
+            color:green;
+        }
+
+        .size {
+            font-size: 66px;
+        }
+
+        #skyblue {
+            color:skyblue;
+        }
+
+        * {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p>pppppp</p>
+    <p>这是红色的</p>
+
+    <!-- 2. 类选择器 定义+使用才能生效 -->
+    <!-- 一个标签可以使用多个类名，用空格隔开即可 -->
+    <p class="green size">这是绿色的</p>
+
+    <!-- 3. id选择器 配合js使用 -->
+    <!-- 
+        id在一个页面中是唯一的，不可重复
+        一个标签上只能有一个id属性值
+        一个id选择器只能选中一个标签
+     -->
+    <p id="skyblue">这个是天蓝色的</p>
+
+    <!-- 4. 通配符选择器 -->
+    <!-- 
+        开发中使用极少，在特殊情况下使用
+        可以用于去除标签默认的margin和padding
+     -->
+    <div>div</div>
+    <p>pppp</p>
+    <h1>h1</h1>
+    <span>span</span>
+
+</body>
+</html>

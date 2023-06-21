@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1. 背景色 */
+        .background_color {
+            /* background-color: pink; */
+            /* background-color: #ccc; */
+            background-color: rgba(red, green, blue, alpha);
+            /* 三原色，alpha:透明度 */
+            width: 200px;
+            height: 100px;
+        }
+
+        /* 2. 背景图片 */
+        .background_img {
+            /* 
+                3. 背景平铺
+                background-repeat: no-repeat(不平铺，表示图片只显示一张)
+             */
+
+            /* 
+                4. 背景位置l
+                background-position: 参数1 参数2
+                正数：向右向下移动；负数：向左向右移动
+                注意：背景色 和背景图只显示在盒子里面
+             */
+            width: 600px;
+            height: 600px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: pink;
+            background-image: url(../../HTML/th.jpg);
+            /* 复合属性(不分先后顺序):背景色 背景图 背景图平铺 背景图位置 */
+            /* background: pink url(../../HTML/th.jpg) no-repeat 100px 50px; */
+        }
+    </style>
+</head>
+<body>
+    <div class="background_color">div</div>
+    <div class="background_img"></div>
+</body>
+</html>

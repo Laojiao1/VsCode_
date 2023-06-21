@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1. input系列标签的基本使用 -->
+    <!-- 
+        场景：在网页中显示收集用户信息的表单效果。如: 登录页，注册页
+        属性值：
+        text: 文本框，输入单行文本
+        password: 密码框，输入密码
+        radio: 单选框，多选一
+        checkbox: 多选框，多选多
+        file: 文件选择，用于之后上传文件
+        submit: 提交按钮，用于提交
+        reset: 重置按钮，用于重置
+        button: 普通按钮，默认无功能，之后配合js添加功能
+     -->
+    <!-- 写什么就显示什么 -->
+    文本框: <input type="text">
+    <br>
+    <br>
+    <!-- 书写的内容都会变成点点显示 -->
+    密码框: <input type="password">
+    <br>
+    <br>
+    单选框: <input type="radio">
+    <br>
+    <br>
+    多选框: <input type="checkbox">
+    <br>
+    <br>
+    上传文件: <input type="file">
+    <br>
+    <br>
+
+    <!-- 2. 占位符(提示信息): placeholder -->
+    <input type="text" placeholder="请输入用户名：">
+    <br>
+    <input type="password" placeholder="请输入密码：">
+    
+    <!-- 3. 单选功能和默认选中 -->
+    <!-- 
+        属性：
+        name: 分组，有相同name属性的单选框为一组
+        checked: 默认选中
+     -->
+    <br>
+    <br>
+    性别：<input type="radio" name="gender"> 男 <input type="radio" name="gender"> 女
+    <br>
+    <br>
+    <input type="checkbox" checked>我同意注册条款和会员加入标准 
+    
+    <!-- 4. 上传多个文件: multiple -->
+    <br>
+    <br>
+    <input type="file" multiple>
+
+    <!-- 5. 按钮input -->
+    <!-- 
+        submit: 提交按钮
+        reset: 重置按钮，点击之后恢复表单默认值
+        button: 普通按钮，默认无功能，之后配合js添加功能
+     -->
+    <br>
+    <br>
+    <form action=""> <!-- action为提交地址 -->
+        <input type="text" placeholder="请输入用户名：">
+        <br>
+        <input type="password" placeholder="请输入密码：">
+        <br>
+        <input type="submit" value="免费注册">
+        <input type="reset">
+        <input type="button" value="普通按钮">
+    </form>
+
+    <!-- 6. 按钮button -->
+    <!-- 
+        属性同input按钮
+     -->
+    <br>
+    <button>按钮</button>
+    <button type="submit">提交按钮</button>
+    <button type="reset">重置按钮</button>
+    <button type="button">普通按钮</button>
+
+    <!-- 7. select 下拉菜单标签 -->
+    <!-- 
+        场景：在网页中提供多个选择项的下拉菜单表单控件
+        select: 下拉菜单的整体
+        option: 下拉菜单的每一项
+        常见属性：
+        selected：下拉菜单的默认选中
+     -->
+    <br>
+    <br>
+    <select>
+        <option value="">北京</option>
+        <option value="">上海</option>
+        <option value="">深圳</option>
+        <option value="" selected>广州</option>
+    </select>
+
+    <!-- 8. 文本域 -->
+    <!-- 
+        场景：在网页中提供可输入多行文本的表单控件
+        标签名：textarea
+        属性：
+        cols: 规定了文本域内可见宽度
+        rows: 规定了文本域内可见行数
+        注意：
+            右下角可以拖拽改变大小
+            实际开发时针对样式效果推荐使用CSS设置
+     -->
+    <br>
+    <br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    
+    <!-- 9. label标签 -->
+    <!-- 
+        标签名：label
+        场景: 点击文字也能选中该选项
+        使用方法1：
+            1. 使用label标签把内容(如：文本)包裹起来
+            2. 在表单标签上添加id属性
+            3. 在label标签的for属性中设置对应的id属性值
+        使用方法2：
+            1. 直接使用label标签把内容(如：文本)和表单标签一起包裹起来
+            2. 需要把label标签的for属性删除即可
+     -->
+    <br>
+    <br>
+    性别：
+    <input type="radio" name="gender" id="1"> <label for="1">男</label> 
+    <label><input type="radio" name="gender"> 女</label>
+
+    <!-- 10. 语义化标签 -->
+    <!-- 
+        div: 一行只显示一个
+        span: 一行显示多个
+     -->
+    <br>
+    <br>
+    <div>这是div标签</div>
+    <div>这是div标签</div>
+
+    <span>这是span标签</span>
+    <span>这是span标签</span>
+
+    <!-- 11. 字符实体 -->
+    <!-- 网页不认识多个空格,只认识一个,&nbsp可以输出空格-->
+    <br>
+    <br>
+    这是一段&nbsp;&nbsp;&nbsp;&nbsp;话;
+
+</body>
+</html>

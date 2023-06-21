@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 因为有通栏，占满一行的边框，所以需要有一个通栏，沾满一行的盒子 */
+        .nav {
+            height: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+        ul  {
+            list-style: none;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        ul li {
+            font: left;
+            width: 15%;
+            height: 40px;
+            border-right: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 40px;
+            display: inline-block;
+        }
+        ul .last {
+            border-right: none;
+        }
+        ul li a {
+            display: block;
+            height: 40px;
+            text-decoration: none;
+            color: #000;
+        }
+        ul li .app {
+            position: relative;
+        }
+        .code {
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 16px;
+            /* transform: translate(-50%); */
+
+        }
+        .nav li a:hover {
+            background-color: #ccc;
+        }
+        .nav li a:hover img {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li><a href="">我要投资</a></li>
+            <li><a href="">平台介绍</a></li>
+            <li><a href="">新手专区</a></li>
+            <li><a href="" class="app">手机微金所 <img src="../image/JD.png" alt="" class="code"></a></li>
+            <li><a href="" class="last">个人中心</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=  , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a {
+            vertical-align: bottom;
+            /* 
+                baseline: 基线对齐（默认） 
+                top: 顶部对齐
+                middle: 中部对齐
+                bottom: 底部对齐
+            */
+        }
+        
+        /* 浏览器遇到行内或者行内块标签当文字处理，默认文字是按照基线对齐，如果想要对齐可以采用如下方式 */
+        input {
+            height: 30px;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        .father input {
+            vertical-align: top;
+        }
+
+        .father1 {
+            width: 400px;
+            background-color: pink;
+        }
+        .father1 img {
+            /* vertical-align: middle; */
+            display: block;
+        }
+
+        .father2 {
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            line-height: 600px;
+            text-align: center;
+        }
+        .father2 img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <img src="../学成在线项目/images/course02.png" alt="" style="width: 500px;" class="a"><input type="text" name="" id="">
+    <br><br>
+
+    <input type="text" name="" id="" class="b"><input type="button" value="搜索">
+
+    <br><br>
+
+    <div class="father">
+        <input type="text" name="" id="">
+    </div>
+
+    <br><br>
+
+    <div class="father1">
+        <img src="../学成在线项目/images/course03.png" alt="">
+    </div>
+
+    <br><br>
+
+    <div class="father2">
+        <img src="../学成在线项目/images/course03.png" alt="">
+    </div>
+</body>
+</html>

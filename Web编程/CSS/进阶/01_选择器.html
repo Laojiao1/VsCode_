@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 格式: 父选择器 后代选择器 {} */
+        div p {
+            color : red;
+        }
+
+        /* 空格隔开的是后代：包括孙子，儿子，重孙子...
+        div a {
+            color: red;
+        } */
+
+        /* 只想选中儿子a */
+        /* div的儿子a文字颜色是红色,用'<'号 */
+        div>a {
+            color: red;
+        }
+
+        /* 选择器1，选择器2 ... {} */
+        span, h1 {
+            color:blueviolet;
+        }
+
+        /* 必须是p标签，而且添加了box类 */
+        p.box {
+            color:aqua;
+        }
+
+        a:hover {
+            color:red;
+            background-color: green;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 1. 后代选择器 ' ' -->
+    <!-- 后代：儿子，孙子，重孙子.... -->
+    <p>这是一个p标签</p>
+    <div>
+        <p>这是div的儿子</p>
+    </div>
+    <!-- 2. 子代选择器 '<' -->
+    <div>
+        父级
+        <a href="#">这是div里面的a</a>
+        <p>
+            <a href="#">这是div里面的p里面的a</a>
+        </p>
+    </div>
+    <!-- 3. 并集选择器 -->
+    <span>333</span>
+    <h1>444</h1>
+
+    <!-- 4. 交集选择器:选中页面中同时满足多个选择器的标签 -->
+    <p class="box">这是p标签: box</p>
+    <p>ppppp</p>
+    <div class="box">这是div标签: box</div>
+
+    <!-- 5. hover伪类选择器：选中鼠标悬停在元素上的状态，设置样式 -->
+    <a href="#">这是一个超链接</a>
+
+</body>
+</html>

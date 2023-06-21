@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            清除内外默认边距
+        * {
+            padding: 0;
+            margin: 0;
+        } 
+
+        */
+
+        div {
+            height: 300px;
+            width: 400px;
+            background: pink;
+
+            /* 边框线(可以撑大尺寸) */
+            /* solid:实线；dashed:虚线 */
+            /* border-left/right: ... 单独控制一边的边框 */
+            border: 1px solid black;
+
+            /* 内边距(可以撑大尺寸) */
+            /* padding可以用复合属性，最多取四个值，分别表示上，右，下，左距离边框的距离(顺时针) */
+            padding: 20px;
+
+            /* 使用內减模式可以不撑大盒子： */
+            box-sizing: border-box;
+
+            /* 外边距 */
+            margin: 50px;
+
+            /* 版心居中 */
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div>盒子里的内容</div>
+</body>
+</html>
